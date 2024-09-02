@@ -22,6 +22,8 @@ function LinkInput({label, placeholder, value, onChange}) {
             onChange(event.target.value);
         }
     
+    };
+
     return (
         <div style={{ marginBottom: '1rem' }}>
             {label && <label>{label}</label>}
@@ -40,55 +42,7 @@ function LinkInput({label, placeholder, value, onChange}) {
         </div>
     )
     
-    
-    };
+
 }
 
-export default TextInput;
-
-
-/**
- * 
- * 
- * 
- * 
- * Text input function example
-
-// TextInput.jsx
-import React, { useState } from 'react';
-
-function TextInput({ label, placeholder, value, onChange }) {
-  // If you want to manage state within the component
-  const [inputValue, setInputValue] = useState(value || '');
-
-  // Handler for when the input changes
-  const handleChange = (event) => {
-    setInputValue(event.target.value);
-    // If an onChange prop is passed, call it to update the parent component
-    if (onChange) {
-      onChange(event.target.value);
-    }
-  };
-
-  return (
-    <div style={{ marginBottom: '1rem' }}>
-      {label && <label>{label}</label>}
-      <input
-        type="text"
-        placeholder={placeholder}
-        value={inputValue}
-        onChange={handleChange}
-        style={{
-          padding: '0.5rem',
-          borderRadius: '4px',
-          border: '1px solid #ccc',
-          width: '100%',
-        }}
-      />
-    </div>
-  );
-}
-
-export default TextInput;
-
- */
+export default LinkInput;
